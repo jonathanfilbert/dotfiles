@@ -9,7 +9,7 @@
   "editor.cursorBlinking": "expand",
   "editor.formatOnSave": true,
   "html.format.enable": true,
-  "editor.letterSpacing": 0.5,
+  "css.format.enable": true,
   "workbench.editor.tabSizing": "shrink",
   "editor.cursorWidth": 2,
   "extensions.ignoreRecommendations": false,
@@ -17,15 +17,28 @@
   "editor.minimap.showSlider": "always",
   "window.closeWhenEmpty": true,
   "workbench.startupEditor": "none",
-  "editor.fontSize": 13,
+  "editor.fontSize": 15,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        },
+      }
+    ]
+  },
+  "editor.lineHeight": 24,
   "files.trimTrailingWhitespace": true,
   "html.format.preserveNewLines": true,
   "editor.useTabStops": true,
-  "terminal.integrated.fontSize": 13,
-  "editor.fontWeight": "400",
+  "terminal.integrated.fontSize": 15,
+  "debug.console.fontSize": 14,
+  "debug.console.wordWrap": true,
+  "debug.console.collapseIdenticalLines": true,
   "workbench.editor.enablePreview": true,
   "editor.autoIndent": "full",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.multiCursorModifier": "ctrlCmd",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -36,7 +49,8 @@
   "editor.showFoldingControls": "always",
   "editor.formatOnPaste": true,
   "editor.tabSize": 2,
-  "editor.fontFamily": "Jetbrains Mono",
+  "editor.fontFamily": "'MonoLisa'",
+  "editor.fontWeight": "400",
   "editor.fontLigatures": true,
   "editor.accessibilitySupport": "off",
   "editor.colorDecorators": true,
@@ -58,7 +72,7 @@
   "editor.inlineSuggest.enabled": true,
   "[dart]": {
     "editor.formatOnSave": true,
-    "editor.formatOnType": false,
+    "editor.formatOnType": true,
     "editor.rulers": [
       80
     ],
@@ -66,7 +80,8 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off",
+    "editor.wordWrap": "on",
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -74,25 +89,28 @@
   "workbench.iconTheme": "material-icon-theme",
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
     "plaintext": true,
-    "markdown": false
+    "markdown": false,
+    "scminput": false,
+    "yaml": true
   },
-  "workbench.colorTheme": "One Dark Pro Darker",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   "diffEditor.codeLens": true,
   "git.mergeEditor": false,
-  "window.zoomLevel": 0,
   "material-icon-theme.folders.color": "#42a5f5",
   "material-icon-theme.hidesExplorerArrows": false,
-  "material-icon-theme.activeIconPack": "angular_ngrx",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggest.showColors": true,
   "dart.hotReloadOnSave": "all",
   "dart.previewFlutterUiGuides": true,
   "dart.previewFlutterUiGuidesCustomTracking": true,
+  "dart.closingLabels": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -108,4 +126,46 @@
     "**/.fvm": true
   },
   "comment-divider.shouldLengthIncludeIndent": true,
+  "terminal.integrated.profiles.osx": {
+    "rosetta": {
+      "path": "arch",
+      "args": [
+        "-x86_64",
+        "zsh",
+        "-l"
+      ],
+      "overrideName": true
+    },
+  },
+  // StatusBar color:
+  "workbench.colorCustomizations": {
+    "statusBar.debuggingBackground": "#7CCC6C",
+    "statusBar.debuggingForeground": "#000000",
+    "terminalCursor.foreground": "#00ffaa"
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "dart.useLegacyAnalyzerProtocol": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "editor.lineNumbers": "on",
+  "workbench.colorTheme": "One Dark Pro",
+  "explorer.confirmDelete": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "security.promptForLocalFileProtocolHandling": false,
+  "material-icon-theme.folders.theme": "specific",
+  "window.titleBarStyle": "native",
+  // Remove position indicator in the editor's scrollbar
+  "editor.hideCursorInOverviewRuler": true,
+  // Remove unnecessary controls from primary bar and tabs list
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 11,
+      "y": 10
+    }
+  },
+  "apc.header": {
+    "height": 36
+  },
+  "window.zoomLevel": -1,
 }
